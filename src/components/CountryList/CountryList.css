@@ -1,0 +1,25 @@
+.CountryList-block {
+  border: 2px solid lightgray;
+  background: aqua;
+  height: 90vh;
+  overflow: scroll;
+  scrollbar-color: #007 #FFF;
+}
+
+.CountryList {
+  background: lightyellow;
+  list-style-type: none;
+  margin: 0;
+  padding: 20px 0;
+}
+
+.CountryList-item {
+  line-height: 30px;
+  text-decoration: underline;
+  padding: 0 20px;
+}
+
+.CountryList-item:hover {
+  cursor: pointer;
+  background: lightgoldenrodyellow;
+}
