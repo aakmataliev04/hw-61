@@ -41,7 +41,7 @@ const CountryInfo: React.FC<Props> = ({selectedCountry}) => {
           <img
             src={country && country.flags.png ? country.flags.png : ''}
             alt="Флаг страны" className="flag"/>
-          <h1>Название страны: {country.name}</h1>
+          <h1>Cтранa: {country.name}</h1>
           <p><strong>Столица: </strong>{country.capital}</p>
           <p><strong>Население: </strong>{country.population}</p>
           <p><strong>Площадь: </strong>{country.area} км²</p>
