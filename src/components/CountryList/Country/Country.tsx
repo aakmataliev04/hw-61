@@ -3,11 +3,12 @@ import {CountryApi} from '../../../types';
 
 interface Props {
   country: CountryApi;
+  catchCode: () => void;
 }
 
-const Country: React.FC<Props> = ({country}) => {
+const Country: React.FC<Props> = ({country, catchCode}) => {
   return (
-    <li  className={'CountryList-item'} key={country.alpha3Code}>{country.name}</li>
+    <li onClick={catchCode} className={'CountryList-item'} key={country.alpha3Code}>{country.name}</li>
   );
 };
 

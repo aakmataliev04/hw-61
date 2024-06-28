@@ -5,16 +5,17 @@ import './CountryList.css';
 
 interface Props {
   countries: CountryApi[];
+  catchCode: (alpha3Code: string) => void;
 }
 
-const CountryList: React.FC<Props> = ({countries}) => {
+const CountryList: React.FC<Props> = ({countries, catchCode}) => {
   return (
     <div className={'CountryList-block'}>
       <ul className={'CountryList'}>
         {
           countries && countries.map((country) => {
             return (
-              <Country key={country.alpha3Code} country={country}/>
+              <Country catchCode={() => catchCode(country.alpha3Code)} key={country.alpha3Code} country={country}/>
             );
           })
         }
